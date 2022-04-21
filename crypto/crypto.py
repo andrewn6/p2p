@@ -3,7 +3,7 @@ import typing
 import bcrypt
 from cryptography.fernet import Fernet
 
-def encrypt(file:str):
+def encrypt(file:str) -> None:
     """Encrypt file"""
     key = Fernet.generate_key()
     global key
@@ -31,7 +31,7 @@ def encrypt(file:str):
         encrypted_file.write(encrypted)
 
 
-def decrypt(file:str):
+def decrypt(file:str) -> None:
     """Decrypt file"""
 
     # using the key
@@ -49,7 +49,7 @@ def decrypt(file:str):
     with open(file, 'wb') as dec_file:
         dec_file.write(decrypted)
 
-    pass
+    
 
 
 
