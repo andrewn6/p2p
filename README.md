@@ -1,15 +1,37 @@
-# p2p
+# A Peer-To-Peer Storage Server
 
-Creators: anddddrew & Necloremius
+## Installation
 
+**Clone the Repo**
+```
+git clone https://github.com/andddddrew/p2p.git
+```
 
-Project: P2P File Storage/Sharing service written in Python
+Cd into the directory
 
+```
+cd p2p
+```
 
-Files:
+Install deps
+```
+./install_deps.sh
+```
 
+Start a node
+``` 
+python3 network/node.py
+```
 
-p2p/crypto/crypto.py: Encryption (encrypt()) and Decryption (decryption()) functions
+## Tests
+We have a series of tests for this application.
 
+You can run them with the following command:
 
-p2p/crypto/test.txt: Test file for encrypt() and decrypt()
+```
+./run_tests.sh
+```
+
+## Authors
+- Andrew Nijmeh
+- Necloremius
