@@ -3,10 +3,12 @@ import typing
 import bcrypt
 from cryptography.fernet import Fernet
 
-def encrypt(file:str) -> None:
+def encrypt(ifile:str) -> None:
+
     """Encrypt file"""
-    key = Fernet.generate_key()
     global key
+    key = Fernet.generate_key()
+
 
     # string the key in a file
     with open('filekey.key', 'wb') as filekey:
@@ -20,14 +22,14 @@ def encrypt(file:str) -> None:
     fernet = Fernet(key)
 
     # read in the original file
-    with open(file, 'rb') as file:
+    with open(ifile, 'rb') as file:
         original = file.read()
 
     # encrypt the file
     encrypted = fernet.encrypt(original)
 
     # write the encrypted file to the original file
-    with open(file, 'wb') as encrypted_file:
+    with open(ifile, 'wb') as encrypted_file:
         encrypted_file.write(encrypted)
 
 
@@ -36,6 +38,7 @@ def decrypt(file:str) -> None:
 
     # using the key
     fernet = Fernet(key)
+
 
     # opening the encrypted file
     with open(file, 'rb') as enc_file:
@@ -49,7 +52,9 @@ def decrypt(file:str) -> None:
     with open(file, 'wb') as dec_file:
         dec_file.write(decrypted)
 
-    
+
+
+
 
 
 
