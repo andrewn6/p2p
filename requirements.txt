@@ -1,1 +1,4 @@
 cryptography
+grpcio-tools
+gprcio
+psutil
