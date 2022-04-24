@@ -10,4 +10,5 @@ logger.setLevel(logging.INFO)
 
 class Client(object):
   def client_greet(node_ip):
-    pass
+    logger.info("connecting to port".format(node_ip + ":" + str(globals.port))
+    channel = gprc.insecure_channel(node_ip + ":" + str(globals.port))
