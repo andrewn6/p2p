@@ -36,5 +36,4 @@ You can run them with the following command:
 - Andrew Nijmeh
 - Necloremius
 
-## Build/Progress log
-https://wakeful-basilisk-885.notion.site/P2P-Service-Progress-Log-525e0f6e35344a1a81d4ae8f6c27b80e
+
