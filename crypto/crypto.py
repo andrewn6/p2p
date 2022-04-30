@@ -4,7 +4,6 @@ import bcrypt
 from cryptography.fernet import Fernet
 
 def encrypt(ifile:str) -> None:
-
     """Encrypt file"""
     global key
     key = Fernet.generate_key()
